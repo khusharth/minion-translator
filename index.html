@@ -4,8 +4,30 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Banana Talk</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1>talk banana</h1>
+        <div class="container">
+            <div class="translator__content">
+                <h1 class="translator__heading">🙊 Talk Banana 🙊</h1>
+
+                <textarea
+                    name="textarea"
+                    id="textarea"
+                    placeholder="Enter text to translate..."
+                ></textarea>
+                <button class="btn" type="button" id="btn">Translate</button>
+
+                <div>
+                    <img height="60px" src="./img/arrow.svg" alt="arrow" />
+                </div>
+                <h2>Output</h2>
+                <div id="output"></div>
+                <div id="error"></div>
+            </div>
+            <div class="translator__image"></div>
+        </div>
+
+        <script src="app.js"></script>
     </body>
 </html>
