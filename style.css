@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+
+:root {
+    --primary-light: #fdfb86;
+    --primary-dark: #fffc00;
+    --error: #df2c1f;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 400;
+    font-family: "Balsamiq Sans", cursive;
+    font-size: 1.6rem;
+}
+
+.btn {
+    color: inherit;
+    font-family: inherit;
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px -11px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: scale(1);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+}
+
+.translator__content {
+    flex-basis: 50%;
+    background: var(--primary-dark);
+    background: linear-gradient(
+        to right,
+        var(--primary-light),
+        var(--primary-dark)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.translator__heading {
+    font-size: 3.5rem;
+    margin: 3rem 0;
+    /* background: #fff; */
+}
+
+.translator__content textarea {
+    font-family: inherit;
+    display: block;
+    background: #fff;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 12px 30px -11px rgba(0, 0, 0, 0.3);
+    resize: none;
+    margin-bottom: 2rem;
+}
+
+.translator__image {
+    flex-basis: 50%;
+    background-image: url(./img/minion.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#output {
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+    width: 80%;
+    min-height: 6rem;
+    background: #fff;
+    box-shadow: 0 12px 30px -11px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow: scroll;
+}
+
+#error {
+    visibility: hidden;
+    margin-top: 0.5rem;
+    width: 80%;
+    background: #fff;
+    box-shadow: 0 12px 30px -11px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    z-index: 10;
+    color: var(--error);
+}
+
+@media only screen and (max-width: 767px) {
+    .translator__content {
+        flex-basis: 100%;
+    }
+    .translator__image {
+        display: none;
+    }
+}
